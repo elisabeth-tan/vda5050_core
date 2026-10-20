@@ -5,9 +5,7 @@ Jetty demo world and resources
 
 ## Steps to Launch
 
-1. Ubuntu 24.4
-
-Ensure the correct Ubuntu version is used
+Ensure the correct Ubuntu version is used (Ubuntu 24.4)
 
 ```bash
 lsb_release -a
@@ -16,9 +14,9 @@ lsb_release -a
 Launch the demo
 
 ```bash
-cd jetty_demo
-export GZ_SIM_RESOURCE_PATH=`pwd`/jetty_demo/models:$GZ_SIM_RESOURCE_PATH
-gz sim -v 4 jetty_demo/worlds/jetty.sdf
+cd ~/vda5050_core/vda5050_gz/jetty_demo
+export GZ_SIM_RESOURCE_PATH=`pwd`/models:$GZ_SIM_RESOURCE_PATH
+gz sim -v 4 worlds/jetty.sdf
 ```
 
 ## Development in distrobox
