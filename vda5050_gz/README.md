@@ -5,10 +5,16 @@ Jetty demo world and resources
 
 ## Steps to Launch
 
-Ensure the correct Ubuntu version is used (Ubuntu 24.4)
+Ensure the correct Ubuntu version is used (Ubuntu 24.04)
 
 ```bash
 lsb_release -a
+```
+
+Ensure Gazebo Jetty is installed, or install the Jetty binaries [here] (https://gazebosim.org/docs/latest/install_ubuntu/)
+
+```bash
+dpkg -l gz-jetty
 ```
 
 Launch the demo
@@ -17,16 +23,6 @@ Launch the demo
 cd ~/vda5050_core/vda5050_gz/jetty_demo
 export GZ_SIM_RESOURCE_PATH=`pwd`/models:$GZ_SIM_RESOURCE_PATH
 gz sim -v 4 worlds/jetty.sdf
-```
-
-## Development in distrobox
-
-```bash
-distrobox create -n jetty_demo --hostname jetty_demo -i ghcr.io/gazebosim/jetty_demo:main
-distrobox enter jetty_demo
-
-source /ws_jetty/install/setup.bash
-ros2 launch jetty_demo world.launch.xml
 ```
 
 ## Performance notes
